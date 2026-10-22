@@ -32,7 +32,7 @@ class WallpaperPanelPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Column(
         children: [
-          Text("Wallpaper", style: Theme.of(context).textTheme.titleLarge),
+          Text("Fondo de pantalla", style: Theme.of(context).textTheme.titleLarge),
           Divider(),
           if (context.read<SettingsService>().unsplashEnabled)
             TextButton(
@@ -52,7 +52,7 @@ class WallpaperPanelPage extends StatelessWidget {
               children: [
                 Icon(Icons.gradient),
                 Container(width: 8),
-                Text("Gradient", style: Theme.of(context).textTheme.bodyMedium),
+                Text("Degradado", style: Theme.of(context).textTheme.bodyMedium),
               ],
             ),
             onPressed: () => Navigator.of(context).pushNamed(GradientPanelPage.routeName),
@@ -62,7 +62,7 @@ class WallpaperPanelPage extends StatelessWidget {
               children: [
                 Icon(Icons.insert_drive_file_outlined),
                 Container(width: 8),
-                Text("Custom", style: Theme.of(context).textTheme.bodyMedium),
+                Text("Personalizado", style: Theme.of(context).textTheme.bodyMedium),
               ],
             ),
             onPressed: () async {
@@ -76,7 +76,7 @@ class WallpaperPanelPage extends StatelessWidget {
                       children: [
                         Icon(Icons.error_outline, color: Colors.red),
                         SizedBox(width: 8),
-                        Text("Please install a file explorer in order to pick an image.")
+                        Text("Instala un explorador de archivos para poder elegir una imagen.")
                       ],
                     ),
                   ),
@@ -99,7 +99,7 @@ class WallpaperPanelPage extends StatelessWidget {
                     ),
                   ),
                   child: Text(
-                    "Photo by ${authorInfo["username"]} on Unsplash",
+                    "Foto de ${authorInfo["username"]} en Unsplash",
                     style: Theme.of(context).textTheme.bodySmall,
                   ),
                 );
