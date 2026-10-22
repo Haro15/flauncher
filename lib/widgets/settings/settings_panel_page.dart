@@ -97,23 +97,6 @@ class SettingsPanelPage extends StatelessWidget {
                 dense: true,
               ),
               Divider(),
-              SwitchListTile(
-                contentPadding: EdgeInsets.symmetric(horizontal: 8),
-                value: settingsService.crashReportsEnabled,
-                onChanged: (value) => settingsService.setCrashReportsEnabled(value),
-                title: Text("Informe de errores"),
-                dense: true,
-                subtitle: Text("Enviar informes de errores automáticamente a Firebase Crashlytics."),
-              ),
-              SwitchListTile(
-                contentPadding: EdgeInsets.symmetric(horizontal: 8),
-                value: settingsService.analyticsEnabled,
-                onChanged: (value) => settingsService.setAnalyticsEnabled(value),
-                title: Text("Informe de analíticas"),
-                dense: true,
-                subtitle: Text("Compartir datos de uso con Firebase Analytics."),
-              ),
-              Divider(),
               TextButton(
                 child: Row(
                   children: [
