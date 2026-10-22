@@ -45,18 +45,19 @@ class FLauncherApp extends StatelessWidget {
   final UnsplashService _unsplashService;
   final FirebaseRemoteConfig _firebaseRemoteConfig;
 
-  static const MaterialColor _swatch = MaterialColor(0xFF011526, <int, Color>{
-    50: Color(0xFF36A0FA),
-    100: Color(0xFF067BDE),
-    200: Color(0xFF045CA7),
-    300: Color(0xFF033662),
-    400: Color(0xFF022544),
-    500: Color(0xFF011526),
-    600: Color(0xFF000508),
+    static const MaterialColor _swatch = MaterialColor(0xFF121212, <int, Color>{
+    50: Color(0xFFBDBDBD),
+    100: Color(0xFF757575),
+    200: Color(0xFF4A4A4A),
+    300: Color(0xFF2B2B2B),
+    400: Color(0xFF1C1C1C),
+    500: Color(0xFF121212),
+    600: Color(0xFF0A0A0A),
     700: Color(0xFF000000),
     800: Color(0xFF000000),
     900: Color(0xFF000000),
   });
+
 
   FLauncherApp(
     this._sharedPreferences,
