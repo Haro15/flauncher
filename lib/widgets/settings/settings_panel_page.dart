@@ -35,7 +35,7 @@ class SettingsPanelPage extends StatelessWidget {
         builder: (context, settingsService, __) => SingleChildScrollView(
           child: Column(
             children: [
-              Text("Settings", style: Theme.of(context).textTheme.titleLarge),
+              Text("Ajustes", style: Theme.of(context).textTheme.titleLarge),
               Divider(),
               EnsureVisible(
                 alignment: 0.5,
@@ -44,7 +44,7 @@ class SettingsPanelPage extends StatelessWidget {
                     children: [
                       Icon(Icons.apps),
                       Container(width: 8),
-                      Text("Applications", style: Theme.of(context).textTheme.bodyMedium),
+                      Text("Aplicaciones", style: Theme.of(context).textTheme.bodyMedium),
                     ],
                   ),
                   onPressed: () => Navigator.of(context).pushNamed(ApplicationsPanelPage.routeName),
@@ -55,7 +55,7 @@ class SettingsPanelPage extends StatelessWidget {
                   children: [
                     Icon(Icons.category),
                     Container(width: 8),
-                    Text("Categories", style: Theme.of(context).textTheme.bodyMedium),
+                    Text("Categorías", style: Theme.of(context).textTheme.bodyMedium),
                   ],
                 ),
                 onPressed: () => Navigator.of(context).pushNamed(CategoriesPanelPage.routeName),
@@ -65,7 +65,7 @@ class SettingsPanelPage extends StatelessWidget {
                   children: [
                     Icon(Icons.wallpaper_outlined),
                     Container(width: 8),
-                    Text("Wallpaper", style: Theme.of(context).textTheme.bodyMedium),
+                    Text("Fondo de pantalla", style: Theme.of(context).textTheme.bodyMedium),
                   ],
                 ),
                 onPressed: () => Navigator.of(context).pushNamed(WallpaperPanelPage.routeName),
@@ -76,7 +76,7 @@ class SettingsPanelPage extends StatelessWidget {
                   children: [
                     Icon(Icons.settings_outlined),
                     Container(width: 8),
-                    Text("Android settings", style: Theme.of(context).textTheme.bodyMedium),
+                    Text("Ajustes de Android", style: Theme.of(context).textTheme.bodyMedium),
                   ],
                 ),
                 onPressed: () => context.read<AppsService>().openSettings(),
@@ -86,14 +86,14 @@ class SettingsPanelPage extends StatelessWidget {
                 contentPadding: EdgeInsets.symmetric(horizontal: 8),
                 value: settingsService.use24HourTimeFormat,
                 onChanged: (value) => settingsService.setUse24HourTimeFormat(value),
-                title: Text("Use 24-hour time format"),
+                title: Text("Usar formato de 24 horas"),
                 dense: true,
               ),
               SwitchListTile(
                 contentPadding: EdgeInsets.symmetric(horizontal: 8),
                 value: settingsService.appHighlightAnimationEnabled,
                 onChanged: (value) => settingsService.setAppHighlightAnimationEnabled(value),
-                title: Text("App card highlight animation"),
+                title: Text("Animación de resalte en tarjetas"),
                 dense: true,
               ),
               Divider(),
@@ -101,17 +101,17 @@ class SettingsPanelPage extends StatelessWidget {
                 contentPadding: EdgeInsets.symmetric(horizontal: 8),
                 value: settingsService.crashReportsEnabled,
                 onChanged: (value) => settingsService.setCrashReportsEnabled(value),
-                title: Text("Crash Reporting"),
+                title: Text("Informe de errores"),
                 dense: true,
-                subtitle: Text("Automatically send crash reports through Firebase Crashlytics."),
+                subtitle: Text("Enviar informes de errores automáticamente a Firebase Crashlytics."),
               ),
               SwitchListTile(
                 contentPadding: EdgeInsets.symmetric(horizontal: 8),
                 value: settingsService.analyticsEnabled,
                 onChanged: (value) => settingsService.setAnalyticsEnabled(value),
-                title: Text("Analytics Reporting"),
+                title: Text("Informe de analíticas"),
                 dense: true,
-                subtitle: Text("Share analytics data through Firebase Analytics."),
+                subtitle: Text("Compartir datos de uso con Firebase Analytics."),
               ),
               Divider(),
               TextButton(
@@ -119,7 +119,7 @@ class SettingsPanelPage extends StatelessWidget {
                   children: [
                     Icon(Icons.info_outline),
                     Container(width: 8),
-                    Text("About FLauncher", style: Theme.of(context).textTheme.bodyMedium),
+                    Text("Acerca de FLauncher", style: Theme.of(context).textTheme.bodyMedium),
                   ],
                 ),
                 onPressed: () => showDialog(
