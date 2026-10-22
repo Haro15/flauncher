@@ -32,7 +32,7 @@ class ApplicationsPanelPage extends StatefulWidget {
 }
 
 class _ApplicationsPanelPageState extends State<ApplicationsPanelPage> {
-  String _title = "TV Applications";
+  String _title = "Aplicaciones de TV";
 
   @override
   Widget build(BuildContext context) => DefaultTabController(
@@ -47,13 +47,13 @@ class _ApplicationsPanelPageState extends State<ApplicationsPanelPage> {
                 onTap: (index) {
                   switch (index) {
                     case 0:
-                      setState(() => {_title = "TV Applications"});
+                      setState(() => {_title = "Aplicaciones de TV"});
                       break;
                     case 1:
-                      setState(() => {_title = "Non-TV Applications"});
+                      setState(() => {_title = "Aplicaciones que no son de TV"});
                       break;
                     case 2:
-                      setState(() => {_title = "Hidden Applications"});
+                      setState(() => {_title = "Aplicaciones ocultas"});
                       break;
                     default:
                       throw ArgumentError.value(index, "index");
