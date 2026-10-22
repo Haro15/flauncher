@@ -67,7 +67,7 @@ class ApplicationInfoPanel extends StatelessWidget {
                 children: [
                   Icon(Icons.open_in_new),
                   Container(width: 8),
-                  Text("Open", style: Theme.of(context).textTheme.bodyMedium),
+                  Text("Abrir", style: Theme.of(context).textTheme.bodyMedium),
                 ],
               ),
               onPressed: () async {
@@ -81,7 +81,7 @@ class ApplicationInfoPanel extends StatelessWidget {
                   children: [
                     Icon(Icons.open_with),
                     Container(width: 8),
-                    Text("Reorder", style: Theme.of(context).textTheme.bodyMedium),
+                    Text("Reordenar", style: Theme.of(context).textTheme.bodyMedium),
                   ],
                 ),
                 onPressed: () => Navigator.of(context).pop(ApplicationInfoPanelResult.reorderApp),
@@ -91,7 +91,7 @@ class ApplicationInfoPanel extends StatelessWidget {
                 children: [
                   Icon(application.hidden ? Icons.visibility : Icons.visibility_off_outlined),
                   Container(width: 8),
-                  Text(application.hidden ? "Unhide" : "Hide", style: Theme.of(context).textTheme.bodyMedium),
+                  Text(application.hidden ? "Mostrar" : "Ocultar", style: Theme.of(context).textTheme.bodyMedium),
                 ],
               ),
               onPressed: () async {
@@ -111,7 +111,7 @@ class ApplicationInfoPanel extends StatelessWidget {
                     Container(width: 8),
                     Flexible(
                       child: Text(
-                        "Remove from ${category!.name}",
+                        "Quitar de ${category!.name}",
                         style: Theme.of(context).textTheme.bodyMedium,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
@@ -130,7 +130,7 @@ class ApplicationInfoPanel extends StatelessWidget {
                 children: [
                   Icon(Icons.info_outlined),
                   Container(width: 8),
-                  Text("App info", style: Theme.of(context).textTheme.bodyMedium),
+                  Text("Información de la app", style: Theme.of(context).textTheme.bodyMedium),
                 ],
               ),
               onPressed: () => context.read<AppsService>().openAppInfo(application),
@@ -140,7 +140,7 @@ class ApplicationInfoPanel extends StatelessWidget {
                 children: [
                   Icon(Icons.delete_outlined),
                   Container(width: 8),
-                  Text("Uninstall", style: Theme.of(context).textTheme.bodyMedium),
+                  Text("Desinstalar", style: Theme.of(context).textTheme.bodyMedium),
                 ],
               ),
               onPressed: () async {
